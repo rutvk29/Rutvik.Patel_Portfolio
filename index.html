@@ -1,33 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rutvik Final Boss UI</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<h1>Rutvik Patel</h1>
-<p>Database Administrator at Casepoint</p>
+<canvas id="particles"></canvas>
+<div class="cursor"></div>
 
-<h2>About Me</h2>
-<p>I am a Database Administrator with experience in managing and optimizing databases.</p>
+<!-- FIXED BUTTONS -->
+<div class="menu-btn" id="menuBtn">☰</div>
+<div class="settings-btn" id="settingsBtn">⚙️</div>
 
-<h2>Skills</h2>
-<ul>
-<li>SQL</li>
-<li>Performance Tuning</li>
-<li>Backup & Recovery</li>
-</ul>
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+    <span class="close" id="closeMenu">✖</span>
 
-<h2>Projects</h2>
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#hobbies" class="nav-link">Hobbies</a>
+    <a href="#contact" class="nav-link">Contact</a>
+</div>
 
-<h3>Database Optimization</h3>
-<p>Improved query performance by optimizing indexes.</p>
+<!-- SETTINGS -->
+<div class="settings" id="settings">
+    <span class="close" id="closeSettings">✖</span>
 
-<h3>Backup System</h3>
-<p>Implemented automated backup and recovery strategy.</p>
+    <h3>🎨 Colors</h3>
+    <input type="color" id="c1">
+    <input type="color" id="c2">
+    <input type="color" id="c3">
 
-<h2>Contact</h2>
-<p>Email: your@email.com</p>
+    <h3>🎬 Animation</h3>
+    <select id="anim">
+        <option value="flow">Flow</option>
+        <option value="pulse">Pulse</option>
+        <option value="zoom">Zoom</option>
+        <option value="hue">Hue</option>
+        <option value="glow">Glow</option>
+        <option value="mouse">Mouse</option>
+        <option value="none">None</option>
+    </select>
+</div>
 
+<div class="overlay" id="overlay"></div>
+<!-- HERO / PROFILE -->
+<section id="home" class="hero reveal">
+    <div class="hero-content">
+        <div class="profile-wrapper">
+            <img src="D:\New folder\IMG_9434.JPG.jpeg" class="profile-img">
+        </div>
+
+        <h1>Hi, I'm <span>Rutvik Patel</span></h1>
+        <p>
+            Database Administrator | PostgreSQL • MSSQL • Redis • Performance Tuning
+        </p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="glass reveal">
+    <h2>About Me</h2>
+    <p>
+        I am a Database Administrator with 2 years of experience at Casepoint, specializing in PostgreSQL, MSSQL, Mysql and Redis. I manage and optimize production database environments, focusing on server configuration, performance tuning, and query optimization to ensure high performance and reliability. Additionally, I leverage monitoring tools like Grafana and Ipsentry to maintain system health, ensure high availability, and proactively resolve performance issues supporting business-critical applications.    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="glass reveal">
+    <h2>Skills</h2>
+    <div class="card">PostgreSQL</div>
+    <div class="card">MSSQL</div>
+    <div class="card">Mysql</div>
+    <div class="card">Redis</div>
+    <div class="card">Performance Tuning</div>
+    <div class="card">Query Optimization</div>
+    <div class="card">Linux</div>
+    <div class="card">Grafana</div>
+    
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="glass reveal">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>Redis Upgrade Automation (2025)</h3>
+        <p>Led the automation of Redis upgrade processes by transitioning from manual operations to an Ansible-driven solution. Developed and integrated Python scripts to handle complex upgrade workflows, significantly improving deployment speed, consistency, and reducing operational risks..</p>
+    </div>
+
+    <div class="card">
+        <h3>Custom Grafana Dashboard Developmen (2025)</h3>
+        <p>Designed and developed a Grafana dashboard from scratch using MSSQL as a data source. Created queries and visualizations to monitor database performance and system health in real-time. Implemented alerting mechanisms within Grafana to proactively detect issues and ensure timely response to potential failures..</p>
+    </div>
+
+    <div class="card">
+        <h3>Opexus Environment Setup & Migration (2026)</h3>
+        <p>Contributed to the setup of a new database environment following the Casepoint–Opexus merger. Worked on MSSQL server configuration based on standard checklists and assisted in migrating databases from the legacy environment to the new infrastructure. Implemented server monitoring and alerting using Ipsentry to ensure system stability and reliability.</p>
+    </div>
+
+</section>
+<!-- HOBBIES -->
+<section id="hobbies" class="glass reveal">
+    <h2>Hobbies</h2>
+
+    <div class="card">🚀 Exploring Database Performance Optimization</div>
+    <div class="card">🧠 Problem Solving & Debugging</div>
+    <div class="card">🎧 Listening to Music</div>
+    <div class="card">📊 Travelling</div>
+    <div class="card">📸 Photography</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="glass reveal">
+    <h2>Contact</h2>
+    <p>Email: rutvk82@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/rutvik610?utm_source=share_via&utm_content=profile&utm_medium=member_ios" >linkedin.com/in/rutvik.patel</a></p>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
