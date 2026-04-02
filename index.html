@@ -1,130 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rutvik Patel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <title>Rutvik Patel | Database Administrator</title>
+
+    <meta name="description" content="Database Administrator specializing in PostgreSQL, MSSQL, Redis.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rutvik Patel | Database Administrator">
+    <meta property="og:description" content="PostgreSQL • MSSQL • Redis • Performance Tuning Expert">
+    <meta property="og:image" content="images/profile.jpg">
+    <meta property="og:url" content="https://rutvikpatel.com">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="D:\New folder\images\IMG_9434.jpeg" as="image">
 </head>
+<body class="flow">
+    <canvas id="particles"></canvas>
+    <div class="cursor"></div>
 
-<body>
+    <!-- FIXED BUTTONS -->
+    <div class="menu-btn" id="menuBtn" aria-label="Open navigation menu" role="button" tabindex="0">☰</div>
+    <div class="settings-btn" id="settingsBtn" aria-label="Open settings" role="button" tabindex="0">⚙️</div>
 
-<canvas id="particles"></canvas>
-<div class="cursor"></div>
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar">
+        <span class="close" id="closeMenu" aria-label="Close menu">✖</span>
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#hobbies" class="nav-link">Hobbies</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </div>
 
-<!-- FIXED BUTTONS -->
-<div class="menu-btn" id="menuBtn">☰</div>
-<div class="settings-btn" id="settingsBtn">⚙️</div>
-
-<!-- SIDEBAR -->
-<div class="sidebar" id="sidebar">
-    <span class="close" id="closeMenu">✖</span>
-
-    <a href="#home" class="nav-link">Home</a>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#skills" class="nav-link">Skills</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#hobbies" class="nav-link">Hobbies</a>
-    <a href="#contact" class="nav-link">Contact</a>
-</div>
-
-<!-- SETTINGS -->
-<div class="settings" id="settings">
-    <span class="close" id="closeSettings">✖</span>
-
-    <h3>🎨 Colors</h3>
-    <input type="color" id="c1">
-    <input type="color" id="c2">
-    <input type="color" id="c3">
-
-    <h3>🎬 Animation</h3>
-    <select id="anim">
-        <option value="flow">Flow</option>
-        <option value="pulse">Pulse</option>
-        <option value="zoom">Zoom</option>
-        <option value="hue">Hue</option>
-        <option value="glow">Glow</option>
-        <option value="mouse">Mouse</option>
-        <option value="none">None</option>
-    </select>
-</div>
-
-<div class="overlay" id="overlay"></div>
-<!-- HERO / PROFILE -->
-<section id="home" class="hero reveal">
-    <div class="hero-content">
-        <div class="profile-wrapper">
-            <img src="IMG_9434.JPG.jpeg" class="profile-img">
+    <!-- SETTINGS PANEL -->
+    <div class="settings" id="settings">
+        <span class="close" id="closeSettings" aria-label="Close settings">✖</span>
+        <h3>🎨 Customize</h3>
+        <div class="color-pickers">
+            <label>Primary</label><input type="color" id="c1" value="#0a0e1a">
+            <label>Secondary</label><input type="color" id="c2" value="#0f172a">
+            <label>Accent</label><input type="color" id="c3" value="#38bdf8">
         </div>
-
-        <h1>Hi, I'm <span>Rutvik Patel</span></h1>
-        <p>
-            Database Administrator | PostgreSQL • MSSQL • Redis • Performance Tuning
-        </p>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="glass reveal">
-    <h2>About Me</h2>
-    <p>
-        I am a Database Administrator with 2+ years of experience at Casepoint, specializing in PostgreSQL, MSSQL, Mysql and Redis. I manage and optimize production database environments, focusing on server configuration, performance tuning, and query optimization to ensure high performance and reliability. Additionally, I leverage monitoring tools like Grafana and Ipsentry to maintain system health, ensure high availability, and proactively resolve performance issues supporting business-critical applications.    </p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="glass reveal">
-    <h2>Skills</h2>
-    <div class="card">PostgreSQL</div>
-    <div class="card">MSSQL</div>
-    <div class="card">Mysql</div>
-    <div class="card">Redis</div>
-    <div class="card">Performance Tuning</div>
-    <div class="card">Query Optimization</div>
-    <div class="card">Linux</div>
-    <div class="card">Grafana</div>
-    
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="glass reveal">
-    <h2>Projects</h2>
-
-    <div class="card">
-        <h3>Redis Upgrade Automation (2025)</h3>
-        <p>Led the automation of Redis upgrade processes by transitioning from manual operations to an Ansible-driven solution. Developed and integrated Python scripts to handle complex upgrade workflows, significantly improving deployment speed, consistency, and reducing operational risks..</p>
+        <h3>🎬 Animation</h3>
+        <select id="anim">
+            <option value="flow">Flow</option>
+            <option value="pulse">Pulse</option>
+            <option value="zoom">Zoom</option>
+            <option value="hue">Hue</option>
+            <option value="glow">Glow</option>
+            <option value="none">None</option>
+        </select>
     </div>
 
-    <div class="card">
-        <h3>Custom Grafana Dashboard Developmen (2025)</h3>
-        <p>Designed and developed a Grafana dashboard from scratch using MSSQL as a data source. Created queries and visualizations to monitor database performance and system health in real-time. Implemented alerting mechanisms within Grafana to proactively detect issues and ensure timely response to potential failures..</p>
-    </div>
+    <div class="overlay" id="overlay"></div>
 
-    <div class="card">
-        <h3>Opexus Environment Setup & Migration (2026)</h3>
-        <p>Contributed to the setup of a new database environment following the Casepoint–Opexus merger. Worked on MSSQL server configuration based on standard checklists and assisted in migrating databases from the legacy environment to the new infrastructure. Implemented server monitoring and alerting using Ipsentry to ensure system stability and reliability.</p>
-    </div>
+    <!-- HERO -->
+    <section id="home" class="hero reveal">
+        <div class="hero-content">
+            <div class="profile-wrapper">
+                <img src="IMG_9434.jpeg" class="profile-img" alt="Professional headshot of Rutvik Patel, Database Administrator" loading="lazy">
+            </div>
+            <h1>Hi, I'm <span>Rutvik Patel</span></h1>
+            <p>Database Administrator | PostgreSQL • MSSQL • Redis • Performance Tuning</p>
+        </div>
+    </section>
 
-</section>
-<!-- HOBBIES -->
-<section id="hobbies" class="glass reveal">
-    <h2>Hobbies</h2>
+    <!-- ABOUT -->
+    <section id="about" class="glass reveal pulse">
+        <h2>About Me</h2>
+        <p>Database Administrator with 2+ years experience at Casepoint, specializing in PostgreSQL, MSSQL, MySQL, and Redis. Expert in production database management, server configuration, performance tuning, and query optimization. Leverage Grafana and Ipsentry for real-time monitoring and high availability of business-critical applications.</p>
+    </section>
 
-    <div class="card">🚀 Exploring Database Performance Optimization</div>
-    <div class="card">🧠 Problem Solving & Debugging</div>
-    <div class="card">🎧 Listening to Music</div>
-    <div class="card">📊 Travelling</div>
-    <div class="card">📸 Photography</div>
-</section>
+    <!-- SKILLS -->
+    <section id="skills" class="glass reveal flow">
+        <h2>Core Skills</h2>
+        <div class="cards">
+            <div class="card">🗄️ PostgreSQL</div>
+            <div class="card">🗃️ MSSQL</div>
+            <div class="card">🐬 MySQL</div>
+            <div class="card">⚡ Redis</div>
+            <div class="card">⚡ Performance Tuning</div>
+            <div class="card">🔍 Query Optimization</div>
+            <div class="card">🐧 Linux</div>
+            <div class="card">📊 Grafana</div>
+        </div>
+    </section>
 
-<!-- CONTACT -->
-<section id="contact" class="glass reveal">
-    <h2>Contact</h2>
-    <p>Email: rutvk82@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/rutvik610?utm_source=share_via&utm_content=profile&utm_medium=member_ios" >linkedin.com/in/rutvik.patel</a></p>
-</section>
+    <!-- PROJECTS -->
+    <section id="projects" class="glass reveal glow">
+        <h2>Key Projects</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Redis Upgrade Automation (2025)</h3>
+                <p>Led the automation of Redis upgrade processes by transitioning from manual operations to an Ansible-driven solution. Developed and integrated Python scripts to handle complex upgrade workflows, significantly improving deployment speed, consistency, and reducing operational risks.</p>
+            </div>
+            <div class="card">
+                <h3>Custom Grafana Dashboard (2025)</h3>
+                <p>Besigned and developed a Grafana dashboard from scratch using MSSQL as a data source. Created queries and visualizations to monitor database performance and system health in real-time. Implemented alerting mechanisms within Grafana to proactively detect issues and ensure timely response to potential failures.</p>
+            </div>
+            <div class="card">
+                <h3>Opexus Environment Migration (2025 - present )</h3>
+                <p>Contributed to the setup of a new database environment following the Casepoint–Opexus merger. Worked on MSSQL server configuration based on standard checklists and assisted in migrating databases from the legacy environment to the new infrastructure. Implemented server monitoring and alerting using Ipsentry to ensure system stability and reliability.</p>
+            </div>
+        </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- EDUCATION -->
+    <section id="education" class="glass reveal">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-badge">
+                    <span class="badge-icon">🎓</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Bachelor of Engineering (Information Technology)</h3>
+                    <div class="timeline-meta">
+                        <span>Gujarat Technological University</span>
+                        <span>• 2019 – 2023</span>
+                        <span>• CGPA: 7.77</span>
+                    </div>
+                    <p>Focused on Database Systems, Web Development, and Software Engineering with basic knowledge of AI/ML and Data Science.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-badge">
+                    <span class="badge-icon">📚</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Higher Secondary (Science)</h3>
+                    <div class="timeline-meta">
+                        <span>Vidhyamangal Residential School</span>
+                        <span>• 2017 – 2019</span>
+                    </div>
+                    <p>Science stream with focus on Mathematics, Physics, and Computer Science.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section id="hobbies" class="glass reveal zoom">
+        <h2>Hobbies & Interests</h2>
+        <div class="cards">
+            <div class="card">🚀 Database Performance Optimization</div>
+            <div class="card">🧠 Problem Solving & Debugging</div>
+            <div class="card">🎧 Music & Podcasts</div>
+            <div class="card">✈️ Travel</div>
+            <div class="card">📸 Photography</div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="glass reveal pulse">
+        <h2>Get In Touch</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>📧 Email</h3>
+                <p><a href="mailto:rutvk82@gmail.com">rutvk82@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>💼 LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/rutvik610" target="_blank">linkedin.com/in/rutvik610</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>📄 Resume</h3>
+                <p><a href="Rutvik_Patel_Resume.pdf" download>Download CV (PDF)</a></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
